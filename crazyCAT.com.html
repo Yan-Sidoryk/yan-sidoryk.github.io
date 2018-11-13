@@ -1,0 +1,34 @@
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+	function catLoader(){
+
+	$.get("http:/aws.random.cat/meow").done(
+	function(data){
+	$("#cat").append("   <img height=200px src='"  +  data.file +  "'>  ")
+			}
+		)
+	}
+	
+
+	
+
+</script>
+<style>
+body {
+   background:url("https://cdn.wallpapersafari.com/55/88/wlCyTI.jpg")
+
+}
+</style>
+</head>
+<body>
+
+<div id = "cat">
+
+</div>
+<button onclick="catLoader()" style="height:50px;width:200px">give me cat</button>
+</body>
+</html>
