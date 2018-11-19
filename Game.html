@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <title>Game</title>
+
+    <style media="screen">
+      body {
+         background:url("https://cdn.wallpapersafari.com/55/88/wlCyTI.jpg")
+
+      }
+
+      .cat {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    var i = 0;
+    function printCat() {
+      i = i + 1;
+      var gameDiv = $("<div>", {
+        "class" : "cat",
+        "id" : "cat_" + i,
+        "style" : "margin-top: " + getRandomInt(0, 720) + "px; margin-left: " + getRandomInt(0, 1280) + "px;"
+      }).html("<img src='https://orig00.deviantart.net/0a1c/f/2011/174/d/d/nyan_cat_by_dittoxslash-d3js5uz.png' width= '100px' height='100px' >").click(function(){
+        $(this).remove()
+
+      })
+
+      $("body").append(gameDiv)
+
+      setTimeout(printCat, 1000)
+
+    }
+
+printCat()
+
+
+      function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+      }
+
+})
+</script>
+
+  </head>
+  <body>
+
+  </body>
+</html>
