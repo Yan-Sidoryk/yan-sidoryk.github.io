@@ -3,7 +3,6 @@
   <head>
 
     <title>Game</title>
- //loool
     <style media="screen">
       body {
          background:url("https://cdn.wallpapersafari.com/55/88/wlCyTI.jpg")
@@ -36,15 +35,18 @@ function myFunction() {
 }
 
   $(document).ready(function(){
+    var score = 0;
     var i = 0;
     function printCat() {
       i = i + 1;
       var gameDiv = $("<div>", {
         "class" : "cat",
         "id" : "cat_" + i,
-        "style" : "margin-top: " + getRandomInt(0, 720) + "px; margin-left: " + getRandomInt(0, 1100) + "px;"
+        "style" : "margin-top: " + getRandomInt(0, 600) + "px; margin-left: " + getRandomInt(0, 1100) + "px;"
       }).html("<img src='https://orig00.deviantart.net/0a1c/f/2011/174/d/d/nyan_cat_by_dittoxslash-d3js5uz.png' width= '100px' height='100px' >").click(function(){
         $(this).remove()
+        score = score + 1;
+        document.getElementById("myScore").innerHTML = score;
 
       })
 
@@ -68,6 +70,14 @@ printCat()
 
   </head>
   <body>
-Speed: <input type="range" id="myRange" value="1">
+Speed: <input type="range" id="myRange" min="1" max="100" value="1" ">
+<div class="" style="float: right; color:white">
+  <div class="">
+      score
+  </div>
+<div id="myScore">
+
+</div>
+</div>
   </body>
 </html>
