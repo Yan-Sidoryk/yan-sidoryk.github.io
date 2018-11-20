@@ -3,7 +3,7 @@
   <head>
 
     <title>Game</title>
-
+ //loool
     <style media="screen">
       body {
          background:url("https://cdn.wallpapersafari.com/55/88/wlCyTI.jpg")
@@ -21,6 +21,20 @@
 
 
 <script type="text/javascript">
+var XX = 50;
+var y = 50;
+function myFunction() {
+    var x = document.getElementById("myRange").value;
+    if (x != XX){
+      XX = x;
+      y = Math.round(1000/x);
+    }
+    else {
+      y = y;
+    }
+    return y;
+}
+
   $(document).ready(function(){
     var i = 0;
     function printCat() {
@@ -28,7 +42,7 @@
       var gameDiv = $("<div>", {
         "class" : "cat",
         "id" : "cat_" + i,
-        "style" : "margin-top: " + getRandomInt(0, 720) + "px; margin-left: " + getRandomInt(0, 1280) + "px;"
+        "style" : "margin-top: " + getRandomInt(0, 720) + "px; margin-left: " + getRandomInt(0, 1100) + "px;"
       }).html("<img src='https://orig00.deviantart.net/0a1c/f/2011/174/d/d/nyan_cat_by_dittoxslash-d3js5uz.png' width= '100px' height='100px' >").click(function(){
         $(this).remove()
 
@@ -36,7 +50,7 @@
 
       $("body").append(gameDiv)
 
-      setTimeout(printCat, 1000)
+      setTimeout(printCat, myFunction())
 
     }
 
@@ -54,6 +68,6 @@ printCat()
 
   </head>
   <body>
-
+Speed: <input type="range" id="myRange" value="1">
   </body>
 </html>
