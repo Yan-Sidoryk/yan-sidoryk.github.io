@@ -59,10 +59,14 @@
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">
-          <div class="" style="float:left; margin-left:20px; margin-top:30px">
-          Маршрут №1 «Па Падгорнай з Чапскім»
+          <div class="" style="float:left; margin-left:10px; margin-top:30px">
+          Спадчына Караля фон Гуттэн-Чапскага ў сучасным Мінску. Маршрут №1 «Па Падгорнай з Чапскім»
           </div>
+
           </span>
+          <div class="" style="float:right; margin-right:10px; margin-top:30px">
+          Сідорык Ян Андрэевіч 9"А"
+          </div>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer">
           </div>
@@ -70,31 +74,24 @@
 
         </div>
       </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Мовы</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">English (UK)</a>
-          <a class="mdl-navigation__link" href="">Русская (Рус)</a>
-          <a class="mdl-navigation__link" href="">中文</a>
-          </nav>
-      </div>
+
       <main class="mdl-layout__content">
 
 
-        <div id="map" style="float:left; margin-left:5%; margin-top:50px">
-        
-      </div>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3414c41561a572ddc78f933663177258386c72a8946f557d3c8169be0f83fcd6&amp;lang=ru_RU&amp;scroll=true">
+</script>
+<!--
+<script async defer
 
-
-
-
-
-
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+  </script>
+-->
 </div>
-
-
-
-
 </div>
 
 </body>
