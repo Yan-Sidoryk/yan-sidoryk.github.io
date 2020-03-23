@@ -1,89 +1,488 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-
     <title>
 Жывая памяць
     </title>
 <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/marketing-and-digital-marketing/32/business_marketing_advertising_focus_group-512.png" type="image/x-icon">
 
-    <style media="screen">
-      body {
-         background:url("https://cdn.wallpapersafari.com/55/88/wlCyTI.jpg")
-
-      }
-
-      .cat {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-      }
-    </style>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-
-<script type="text/javascript">
-var XX = 50;
-var y = 50;
-function myFunction() {
-    var x = document.getElementById("myRange").value;
-    if (x != XX){
-      XX = x;
-      y = Math.round(1000/x);
-    }
-    else {
-      y = y;
-    }
-    return y;
+<!-- Material Design Lite -->
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <!-- Material Design icon font -->
+  <link rel="stylesheet" href="fons/icon2.png">
+    <style>
+.demo-layout-transparent {
+  background: url('fons/fon2.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
 }
 
-  $(document).ready(function(){
-    var score = 0;
-    var i = 0;
-    function printCat() {
-      i = i + 1;
-      var gameDiv = $("<div>", {
-        "class" : "cat",
-        "id" : "cat_" + i,
-        "style" : "margin-top: " + getRandomInt(0, screen.height*0.7) + "px; margin-left: " + getRandomInt(0, screen.width*0.9) + "px;"
-      }).html("<img src='https://orig00.deviantart.net/0a1c/f/2011/174/d/d/nyan_cat_by_dittoxslash-d3js5uz.png' width= '100px' height='100px' >").click(function(){
-        $(this).remove()
-        score = score + 1;
-        document.getElementById("myScore").innerHTML = score;
+.demo-card-square.mdl-card {
+  width: 25%;
 
-      })
+}
+</style>
 
-      $("body").append(gameDiv)
-
-      setTimeout(printCat, myFunction())
-
-    }
-
-printCat()
-
-
-      function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js">
+    </script>
+    <script>
+      function HIDEME() {
+        var img = document.getElementById('stan');
+        img.style.visibility = 'hidden';
       }
+      function show() {
+        var img = document.getElementById('stan');
+        img.style.visibility = 'visible';
+      }
+    </script>
 
-})
-</script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  </head>
+  </head >
+
   <body>
-<div class="" style="color:white">
-  Speed: <input type="range" id="myRange" min="1" max="100" value="1" >
+
+<div>
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <main class="mdl-layout__content">
+
+        <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="fons/1.jpg" height="75%" width="100%" />
+        </div>
+
+        <div class="demo-card-square mdl-card mdl-shadow--2dp" style="float:left; margin-left:10%; margin-top:5%">
+          <div class="mdl-card__title mdl-card--expand">
+          </div>
+          <div class="mdl-card__supporting-text">
+            <p><a href="#school"><h4> -Гісторыя гімназіі ў гады Вялікай Айчыннай вайны </h4></a></p>
+            <p><a href="#veterans"><h4> -Гісторыя ветэранаў </h4></a></p>
+            <p><a href="#lessons"><h4> -Урокі памяці </h4></a></p>
+            <p><a href="#read"><h4> -Чытаем пра вайну</h4></a></p>
+            <p><a href="#street"><h4> -Вялікая Айчынная вайна ў назвах вуліц </h4></a></p>
+            <p><a href="https://www.tvr.by/events/proekty-atn/belarus-pomnit/"><h4> -Беларусь помніць </h4></a></p>
+            <p><a href="#inet"><h4> -Інтэрнэт-рэсурсы па Вялікай Айчыннай вайне </h4></a></p>
+
+
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+          </div>
+        </div>
+<div style="float:left; margin-left:5%; margin-top:5%">
+  <a href="javascript:show()">
+    <img src="fons/stan.gif" style="visibility:hidden" id="stan"/>
+  </a>
 </div>
-<div class="" style="float: right; color:white">
-  <div class="">
-      score
-  </div>
-<div id="myScore">
+
+<div style="float:left; margin-left:5%;color:white" id="school">
+  <b><h1>Гісторыя гімназіі ў гады Вялікай Айчыннай вайны</h1></b><h3>
+    З 1940 года ў будынку было размешчана вучылішча па падрыхтоўцы ваенных лётчыкаў, курсанты якога ў першыя дні Вялікай Айчыннай вайны бралі ўдзел у абароне Мінска. Многія з іх, прайшоўшы ўсе ваенныя выпрабаванні, у пасляваенныя гады дапамагалі вучням школы стварыць музей Баявой Славы, што існаваў да сярэдзіны 80-х гадоў.У гады вайны ў будынку школы быў размешчаны шпіталь.У 1944-1945 гадах будынак школы быў адноўлены сіламі будучых вучняў і іх бацькоў.
+    Цяжкімі для школы былі пасляваенныя гады. У дакладной запісцы санітарнага інспектара горада Мінска, доктара Ліўшыца, ад 24 ліпеня 1945 года адзначалася, што 23 сярэднія і няпоўныя школы горада Мінска ў большасці сваёй у санітарна-тэхнічным плане не падрыхтаваныя да 1944/1945 навучальнага года. Школы не абаграваліся, не мелі дубэльтаў, адзінарныя шыбы былі часткова забітыя фанерай. Цэнтральнага ацяплення ні ў адной школе не было, галандскія печы пераважна не працавалі. Усталяваныя ў класных памяшканнях жалезныя печы былі не гігіенічнымі, не захоўвалі пастаянную тэмпературу на працяглы час і давалі вельмі нераўнамерны абагрэў.
+    Школы не забяспечваліся палівам, таму вучні ў большасці школ у час заняткаў не здымалі верхняе адзенне і мерзлі ў кабінетах.Дошкі і парты былі зношаныя і не адпавядалі, як правіла, росту школьнікаў.
+    Належны санітарны стан у класах у 1944/1945 навучальным годзе не падтрымліваўся. Большасць школ не былі забяспечаныя пітной вадой. Цітаны для кіпячонай вады адсутнічалі, а там, дзе яны былі, не мелі накрывак і замкоў, у выніку чаго вада забруджвалася.
+    Не было буфетных пакояў для раздачы сняданкаў, а таксама спецыяльных людзей для абслугоўвання буфетаў. Сняданкі раздавалі класныя кіраўнікі непасрэдна ў класах. Адсутнічалі рукамыйнікі. Гэта не дазваляла наладзіць санітарны рэжым харчавання.
+    Унутраныя каналізацыйныя туалеты не працавалі з-за адсутнасці вады і тэхнічнай няспраўнасці.
+    Усё гэта прывяло да ўздыму колькасці інфекцыйных і прастудных захворванняў вучняў (брушны і сыпны тыфы, шкарлятына, адзёр, коклюш, ангіна і інш.).
+    У адпаведнасці з пастановай Савета Народных Камісараў БССР ад 28 жніўня 1945 года 23-й школе былі выдзеленыя 2 швейныя машыны.
+    Намеснік загадчыка ГАРАНА Правільшчыкаў у службовай запісцы адзначае, што ў 1945/1946 навучальным годзе ў горадзе будзе працаваць 24 школы, і што неабходна вызваліць будынак школы №19, таму што вучні гэтай школы ў мінулым навучальным годзе вучыліся ў памяшканні школы №23 – агулам 47 класаў на 30 класных пакояў, у выніку заняткі вяліся ў 4 змены, а гэта недапушчальна.
+    У 1945 годзе школе №23 па ведамасці Мінгарвыканкама выдалі сшыткі.
+    На 1 лістапада 1945 года ў школе №23 навучалася 950 вучняў у 22 класах.
+    У справаздачы ГАРАНА па выніках працы школ горада за 1945/1946 навучальны год у ліку найлепшых дырэктараў названы дырэктар школы № 23 Ляонаў Г.М.</h3>
+
+    <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="school/1.jpg" height="75%" width="100%" />
+    </div>
+
+    <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="school/2.jpg" height="75%" width="100%" />
+    </div>
+
+    <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="school/3.jpg" height="75%" width="100%" />
+    </div>
+
+    <div class="" style="float:left; margin-left:5%; margin-top:5%">
+        <img src="school/4.jpg" height="75%" width="100%" />
+    </div>
 
 </div>
+
+<div style="float:left; margin-left:5%;color:white" id="veterans">
+  <div>
+  <b><h1>Гісторыя ветэранаў</h1></b>
+    <h2>Сарычaва Вера Дзмітрыеўна</h2><h3>
+      Сарычaва Вера Дзмітрыеўна нарадзілася 15.09.1920г. ў в. Сасаў Разанскай вобласці. Бацька, Дзмітрый Андрэевіч, працаваў на чыгунцы, а падчас калектывізацыі сельскай гаспадаркі закліканы начальнікам калгасу. Маці, Варвара Андрэеўна, нарадзіла і выгадавала дзесяцёх дзяцей, сям'я ў Веры Дзмітрыеўны была вялікая і дружная.
+      «Я была на чацвёртым курсе, калі нас заспела вайна. Студэнты неяк зарыентаваліся і праз тыдзень з'ехалі, а потым нельга было з'язджаць з Ленінграда. Нам датэрмінова зрабілі дзяржаўныя іспыты і далі дыпломы.
+      Пасля вайны выйшла замуж і з мужам мы пасялілася ў Мінску. Муж працаваў фотакарэспандэнтам, а я была дырэктарам дзяржархіву Мінскай вобласці, пасля якога і выйшла на пенсію. Пазней я працавала намеснікам дырэктара па культурна-масавай рабоце парка імя Горкага, мы саджалі там гэтыя дрэвы нашымі рукамі, былі там кветкі, клумбы, дзіцячы гарадок.
+      Цяжкая была маладосць, але ніхто не паддаваўся, змагаліся за сваю Радзіму, якая нас выгадавала. Кожны студэнт з'яўляўся сябрам партыі, я была сябрам Камуністычнай партыі Савецкага Саюза (КПСС). Вучыцеся, дзеткі і не дай Бог вам адчуць на сабе, што такое вайна. »
+    </h3>
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/1.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/2.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/3.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/4.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/5.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/6.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/7.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/9.jpg" height="75%" width="100%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/svd/8.jpg" height="75%" width="100%" />
+      </div>
+
+
+    </div>
+
+    <div>
+    <h2 style="float:left; margin-left:5%; margin-top:5%">Канановіч Анатолiй Лявонцьевіч</h2>
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/1.jpg" height="75%" width="75%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/2.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/3.jpg" height="75%" width="60%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/4.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/5.jpg" height="75%" width="90%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/6.png" height="75%" width="140%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/7.jpg" height="75%" width="90%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/8.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/9.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/kal/10.jpg" height="75%" width="75%" />
+      </div>
+    </div>
+
+    <h2 style="float:left; margin-left:5%; margin-top:5%">Аляксандравіч Вячаслаў Іванавіч</h2>
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/1.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/2.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/3.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/4.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/5.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/6.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/7.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/8.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/9.jpg" height="75%" width="50%" />
+      </div>
+
+      <div class="" style="float:left; margin-left:5%; margin-top:5%">
+          <img src="veterans/avi/10.jpg" height="75%" width="50%" />
+      </div>
 </div>
-  </body>
+
+<div style="float:left; margin-left:5%;color:white" id="lessons">
+  <b><h1>Урокі памяці</h1></b>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/1.png" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/2.png" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/3.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/4.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/5.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/6.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/7.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/8.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/9.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/10.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/11.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/12.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/13.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/14.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/15.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/16.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/17.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/18.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/19.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/20.JPG" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="lessons/21.JPG" height="75%" width="75%" />
+  </div>
+</div>
+
+<div style="float:left; margin-left:5%;color:white" id="read">
+  <b><h1>Чытаем пра вайну</h1></b>
+  <p><h3>1.Васіль Быкаў. “Сотнікаў”, “У тумане”, “Абеліск”, “Знак бяды”, “Кар’ер” і інш.</h3></p>
+  <p><h3>2. Святлана Алексіевіч. “У вайны не жаночы твар”</h3></p>
+  <p><h3>3. Артур Зельскі. “Хатынь. Трагедыя беларускага народа”</h3></p>
+  <p><h3>4. Павел Гушынец, Андрэй Аўдзей. “Вайна дзяўчынкі Сашы”</h3></p>
+  <p><h3>5. Маленькія салдаты вялікай вайны</h3></p>
+  <p><h3>6. Аляксандр Суслаў “Малінавы набат”</h3></p>
+  <p><h3>7. І. Шамякін “Трывожнае шчасце”</h3></p>
+  <p><h3>8. «Сямнаццатай вясной», «Хлопцы-равеснікі», «Верасы на выжарынах» «Сасна пры дарозе», «Вецер у соснах», «Сорак трэці».</h3></p>
+  <p><h3>9. Зборнік “Ніколі не забудзем”</h3></p>
+  <p><h3>10. Алесь Адамовіч, Данііл Гранін “Блакадная кніга”</h3></p>
+</div>
+
+<div style="float:left; margin-left:5%;color:white" id="street">
+  <b><h1>Вялікая Айчынная вайна ў назвах вуліц Савецкага раёна</h1></b>
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/0.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/1.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/2.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/3.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/4.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/5.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/6.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/7.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/8.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/9.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/10.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/11.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/12.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/13.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/14.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/15.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/16.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/17.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/18.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/19.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/20.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/21.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/22.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/23.jpg" height="75%" width="75%" />
+  </div>
+
+  <div class="" style="float:left; margin-left:5%; margin-top:5%">
+      <img src="street/24.jpg" height="75%" width="75%" />
+  </div>
+
+
+
+
+
+</div>
+
+<div style="float:left; margin-left:5%;color:white" id="inet">
+  <b><h1>Інтэрнэт-рэсурсы па Вялікай Айчыннай вайне</h1></b>
+    <p><a href="http://storyofvictory.sb.by"><h3>http://storyofvictory.sb.by</h3></a></p>
+    <p><a href="https://adu.by/ru/homepage/belarus-pomnit.html"><h3>https://adu.by/ru/homepage/belarus-pomnit.html</h3></a></p>
+    <p><a href="http://www.warmuseum.by/index.php/o-muzee"><h3>http://www.warmuseum.by/index.php/o-muzee</h3></a></p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
